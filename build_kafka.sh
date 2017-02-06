@@ -3,7 +3,7 @@
 set -e
 set -u
 name=kafka
-version=0.8.2.1
+version=${1:-"0.10.1.1"}
 description="Apache Kafka is a distributed publish-subscribe messaging system."
 url="https://kafka.apache.org/"
 arch="all"
@@ -11,7 +11,7 @@ section="misc"
 license="Apache Software License 2.0"
 package_version="-1"
 src_package="kafka-${version}-src.tgz"
-download_url="http://mirror.sdunix.com/apache/kafka/${version}/${src_package}"
+download_url="http://apache.rediris.es/kafka/${version}/${src_package}"
 origdir="$(pwd)"
 
 #_ MAIN _#
