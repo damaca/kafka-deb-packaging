@@ -12,7 +12,7 @@ license="Apache Software License 2.0"
 package_version="-1"
 src_package="kafka-${version}-src.tgz"
 download_url="http://apache.rediris.es/kafka/${version}/${src_package}"
-origdir="$(pwd)"
+origdir=$(python -c 'import os,sys;print os.path.realpath(sys.argv[1])' $0/..)
 
 #_ MAIN _#
 rm -rf ${name}*.deb
