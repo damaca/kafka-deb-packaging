@@ -17,7 +17,7 @@ origdir=$(python -c 'import os,sys;print os.path.realpath(sys.argv[1])' $0/..)
 #_ MAIN _#
 rm -rf ${name}*.deb
 if [[ ! -f "${src_package}" ]]; then
-  wget ${download_url}
+  wget ${download_url} -P $origdir
 fi
 mkdir -p tmp && pushd tmp
 rm -rf kafka
