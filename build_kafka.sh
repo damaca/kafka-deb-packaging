@@ -49,7 +49,7 @@ fpm -t deb \
     --category ${section} \
     --vendor "" \
     --license "${license}" \
-    -m "${USER}@localhost" \
+    -m "root@localhost" \
     --prefix=/ \
     -s dir \
     -- .
