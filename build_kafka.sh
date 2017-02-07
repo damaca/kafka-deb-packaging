@@ -3,14 +3,15 @@
 set -e
 set -u
 name=kafka
-version=${1:-"0.10.1.1"}
+version=${1:-"0.8.1.1"}
+scala_vesion=${2:-"2.8.0"}
 description="Apache Kafka is a distributed publish-subscribe messaging system."
 url="https://kafka.apache.org/"
 arch="all"
 section="misc"
 license="Apache Software License 2.0"
 package_version="-1"
-src_package="kafka_${version}.tgz"
+src_package="kafka_${scala_version}-${version}.tgz"
 download_url="http://apache.rediris.es/kafka/${version}/${src_package}"
 origdir=$(python -c 'import os,sys;print os.path.realpath(sys.argv[1])' $0/..)
 
