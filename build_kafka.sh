@@ -53,5 +53,5 @@ fpm -t deb \
     --prefix=/ \
     -s dir \
     -- .
-mv kafka*.deb ${origdir}
+mv kafka*.deb ${origdir}/..
 popd
