@@ -4,7 +4,7 @@ set -e
 set -u
 name=kafka
 version=${1:-"0.8.1.1"}
-scala_vesion=${2:-"2.8.0"}
+scala_version=${2:-"2.8.0"}
 description="Apache Kafka is a distributed publish-subscribe messaging system."
 url="https://kafka.apache.org/"
 arch="all"
