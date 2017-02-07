@@ -10,7 +10,7 @@ arch="all"
 section="misc"
 license="Apache Software License 2.0"
 package_version="-1"
-src_package="kafka-${version}.tgz"
+src_package="kafka_${version}.tgz"
 download_url="http://apache.rediris.es/kafka/${version}/${src_package}"
 origdir=$(python -c 'import os,sys;print os.path.realpath(sys.argv[1])' $0/..)
 
