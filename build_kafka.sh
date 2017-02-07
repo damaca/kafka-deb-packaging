@@ -34,7 +34,7 @@ cp ${origdir}/kafka-broker.default build/etc/default/kafka-broker
 cp ${origdir}/kafka-broker.upstart.conf build/etc/init/kafka-broker.conf
 
 tar zxf ${origdir}/${src_package}
-cd kafka-${version}
+cd kafka_${scala_version}-${version}
 sbt update
 sbt package
 mv config/log4j.properties config/server.properties ../build/etc/kafka
