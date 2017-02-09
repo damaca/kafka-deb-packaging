@@ -35,10 +35,11 @@ cp ${origdir}/kafka-broker.upstart.conf build/etc/init/kafka-broker.conf
 
 tar zxf ${origdir}/${src_package}
 cd kafka_${scala_version}-${version}
-sbt update
-sbt package
-mv config/log4j.properties config/server.properties ../build/etc/kafka
-mv * ../build/usr/lib/kafka
+#sbt update
+#sbt package
+#mv config/log4j.properties config/server.properties ../build/etc/kafka
+#mv * ../build/usr/lib/kafka
+mv * ../build
 cd ../build
 
 fpm -t deb \
@@ -51,7 +52,7 @@ fpm -t deb \
     --vendor "" \
     --license "${license}" \
     -m "root@localhost" \
-    --prefix=/ \
+    --prefix=/opt \
     -s dir \
     -- .
 mv kafka*.deb ${origdir}/..
