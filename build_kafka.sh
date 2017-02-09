@@ -52,7 +52,7 @@ fpm -t deb \
     --vendor "" \
     --license "${license}" \
     -m "root@localhost" \
-    --prefix=/opt \
+    --prefix=/opt/kafka \
     -s dir \
     -- .
 mv kafka*.deb ${origdir}/..
