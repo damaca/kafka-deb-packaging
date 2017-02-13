@@ -50,6 +50,9 @@ fpm -t deb \
     --category ${section} \
     --vendor "" \
     --license "${license}" \
+    --after-install ${origdir}/post-install.sh \
+    --before-install ${origdir}/pre-install.sh \
+    --post-uninstall $SCRIPT_DIR/post-unistall.sh
     -m "root@localhost" \
     --prefix=/ \
     -s dir \
