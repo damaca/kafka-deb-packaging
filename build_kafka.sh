@@ -24,10 +24,9 @@ mkdir -p tmp && pushd tmp
 rm -rf kafka
 mkdir -p kafka
 cd kafka
-mkdir -p build/usr/lib/kafka
+mkdir -p build/opt/kafka
 mkdir -p build/etc/default
 mkdir -p build/etc/init
-mkdir -p build/etc/kafka
 mkdir -p build/var/log/kafka
 
 cp ${origdir}/kafka.default build/etc/default/kafka
@@ -39,7 +38,7 @@ cd kafka_${scala_version}-${version}
 #sbt package
 #mv config/log4j.properties config/server.properties ../build/etc/kafka
 #mv * ../build/usr/lib/kafka
-mv * ../build
+mv * ../build/opt/kafka
 cd ../build
 
 fpm -t deb \
@@ -52,7 +51,7 @@ fpm -t deb \
     --vendor "" \
     --license "${license}" \
     -m "root@localhost" \
-    --prefix=/opt/kafka \
+    --prefix=/ \
     -s dir \
     -- .
 mv kafka*.deb ${origdir}/..
