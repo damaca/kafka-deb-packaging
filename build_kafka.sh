@@ -52,7 +52,7 @@ fpm -t deb \
     --license "${license}" \
     --after-install ${origdir}/post-install.sh \
     --before-install ${origdir}/pre-install.sh \
-    --post-uninstall ${origdir}/post-unistall.sh \
+    --post-uninstall ${origdir}/post-uninstall.sh \
     --after-upgrade ${origdir}/after-upgrade.sh \
     -m "root@localhost" \
     --prefix=/ \
