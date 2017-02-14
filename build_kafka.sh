@@ -51,6 +51,7 @@ fpm -t deb \
     --vendor "" \
     --license "${license}" \
     --before-install ${origdir}/pre-install.sh \
+    --after-install ${origdir}/post-install.sh \
     -m "root@localhost" \
     --prefix=/ \
     -s dir \
